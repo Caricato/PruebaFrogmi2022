@@ -1,16 +1,14 @@
-# This is a sample Python script.
+from com.frogmi.task.models.Incident import Incident
+from com.frogmi.task.models.Store import Store
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    incident_n1 = Incident("Something happened", "Do Something!", "04/03/2022")
+    incident_n1.open_date
+    incident_n2 = Incident("Resolve this", "Ok", "01/05/2022")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    incident_n2.solve_incident("13/05/2022")
+
+    new_store = Store([incident_n1, incident_n2])
+    response = new_store.incident_status("01/01/2022", "31/12/2022")
+    print(response)
+
