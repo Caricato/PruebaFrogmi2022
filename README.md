@@ -26,6 +26,13 @@ ValueError -- Si se envía una fecha con formato distinto a "dd/mm/YYYY" como al
 
 InvalidDateRange -- Si el rango de fechas no es un rango válido
 
+### Testing:
+En el paquete com.frogmi.task.tests se tiene definido el archivo TestStore en donde se realizan las pruebas del método
+incident_status.
+
+Para ejecutarlo desde terminal, utilizar el siguiente comando:
+```python -m unittest com.frogmi.task.tests.TestStore```
+
 ## Especificación de Incident:
 Atributos:
 - description: Descripción del incidente ocurrido
@@ -48,3 +55,10 @@ Excepciones:
 ValueError -- Si se envía una fecha con formato distinto a "dd/mm/YYYY" como alguno de los parámetros
 
 InvalidDateRange -- Si solved_date es menor a open_date
+
+### Testing:
+En el paquete com.frogmi.task.tests se tiene definido el archivo TestIncident en donde se realizan las pruebas del método
+solve_incident.
+
+Para ejecutarlo desde terminal, utilizar el siguiente comando:
+```python -m unittest com.frogmi.task.tests.IncidentStore```
