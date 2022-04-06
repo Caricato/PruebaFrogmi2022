@@ -61,4 +61,4 @@ En el paquete com.frogmi.task.tests se tiene definido el archivo TestIncident en
 solve_incident.
 
 Para ejecutarlo desde terminal, utilizar el siguiente comando:
-```python -m unittest com.frogmi.task.tests.IncidentStore```
+```python -m unittest com.frogmi.task.tests.TestIncident```
