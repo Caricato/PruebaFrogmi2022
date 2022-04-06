@@ -1,6 +1,6 @@
 import unittest
 
-from com.frogmi.task.exceptions.InvalidDateRangeException import InvalidDateRangeException
+from com.frogmi.task.exceptions.InvalidDateRangeError import InvalidDateRangeError
 from com.frogmi.task.models.Incident import Incident
 from com.frogmi.task.models.Store import Store
 
@@ -11,7 +11,7 @@ class TestStore(unittest.TestCase):
 
     def test_error_date_range(self):
         new_store = Store(incidents=[])
-        self.assertRaises(InvalidDateRangeException, new_store.incident_status, "31/12/2022", "01/01/2022")
+        self.assertRaises(InvalidDateRangeError, new_store.incident_status, "31/12/2022", "01/01/2022")
 
     def test_empty_incidents(self):
         new_store = Store(incidents=[])

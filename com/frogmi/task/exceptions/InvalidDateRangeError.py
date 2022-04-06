@@ -1,4 +1,4 @@
-class InvalidDateRangeException(Exception):
+class InvalidDateRangeError(Exception):
     def __init__(self, init_date, end_date):
         self.init_date = init_date
         self.end_date = end_date

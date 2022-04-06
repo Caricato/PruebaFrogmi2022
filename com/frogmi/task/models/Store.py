@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from com.frogmi.task.exceptions.InvalidDateRangeException import InvalidDateRangeException
+from com.frogmi.task.exceptions.InvalidDateRangeError import InvalidDateRangeError
 
 
 class Store:
@@ -13,7 +13,7 @@ class Store:
         end_date = datetime.strptime(end_date_str, "%d/%m/%Y")
 
         if end_date < init_date:
-            raise InvalidDateRangeException(init_date, end_date)
+            raise InvalidDateRangeError(init_date, end_date)
 
         open_cases = 0
         solved_cases = 0

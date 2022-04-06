@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from com.frogmi.task.exceptions.InvalidDateRangeException import InvalidDateRangeException
+from com.frogmi.task.exceptions.InvalidDateRangeError import InvalidDateRangeError
 
 
 class Incident:
@@ -16,5 +16,5 @@ class Incident:
         self.state = "solved"
         format_solved_date = datetime.strptime(solved_date, "%d/%m/%Y")
         if format_solved_date < self.open_date:
-            raise InvalidDateRangeException(self.open_date, format_solved_date)
+            raise InvalidDateRangeError(self.open_date, format_solved_date)
         self.solved_date = format_solved_date
